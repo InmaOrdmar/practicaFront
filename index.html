@@ -37,11 +37,48 @@
         </section>
         <section id="contact">
             <h1>Contact</h1>
+            <form action="">
+                <ul>
+                    <li class="form-field">
+                        <p><label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name" required></p>
+                    </li>
+                    <li class="form-field">
+                        <p><label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="Email Address"></p>
+                    </li>
+                    <li class="form-field">
+                        <p><legend>How did you know about me?</legend><br>
+                        <input type="radio" name="opciones" id="linkedin" value="linkedin">
+                        <label for="linkedin">LinkedIn profile</label><br>
+                        
+                        <input type="radio" name="opciones" id="github" value="github">
+                        <label for="github">GitHub profile</label><br>
+                        
+                        <input type="radio" name="opciones" id="google" value="google">
+                        <label for="google">Google search</label><br>
+                        
+                        <input type="radio" name="opciones" id="other" value="other">
+                        <label for="other">Other</label><br>
+                        <input type="text" name="other-text" id="other-text" placeholder="Other" class="additional-field"></p>
+                    </li>
+                    <li class="form-field">
+                        <p><label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="123 456 789"></p>
+                    </li>
+                    <li class="form-field">
+                        <p><label for="message">Leave your message! (150 words max.)</label><br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
+                    </li>
+                </ul>
+            </form>
         </section>
     </main>
     <footer>
         <p>
-            LinkedIn    GitHub  Instagram
+        <a href="https://www.linkedin.com/in/inmaculada-ordonez-marvizon" target="_blank">LinkedIn</a>
+        <a href="https://github.com/InmaOrdmar" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/hispalis86/" target="_blank">Instagram</a>
         </p>
         <p>
             &copy; Inma Ordóñez 2018
