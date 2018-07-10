@@ -3,3 +3,12 @@ div.basics-wrapper img {
     max-height: 15rem;
     width: auto;
 }
+
+figcaption {
+    font-style: italic;
+    font-size: .8rem;
+}
+
+span.bold {
+    font-weight: bold;
+}
