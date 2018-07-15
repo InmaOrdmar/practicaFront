@@ -12,6 +12,10 @@ nav ul, nav li {
     padding: 0; 
 }
 
+header {
+    margin: 0;
+}
+
 nav ul {
     list-style: none;
 }
@@ -33,4 +37,8 @@ blockquote {
 
  img {
      width: 100%;
+ }
+
+ figure {
+     margin: 0;
  }

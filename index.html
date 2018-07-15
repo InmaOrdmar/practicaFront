@@ -1,153 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Inma Ordóñez">
     <meta name="description" content="Curriculum Vitae Inma Ordóñez Web Developer Environmental Scientist">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Nunito&amp;subset=latin-ext" rel="stylesheet">
     <link rel="shortcut icon" href="imgs/leaf-favicon.png" type="image/png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Inma Ordóñez - CV</title>
 </head>
+
 <body>
-    <header>
-        <h1>Inma Ordóñez</h1>
-        <footer>Web Developer - Environmental Scientist</footer>
+
+    <header id="home">
+        <div class="filter">
+            <div class="title-wrapper">
+                <h1>Inma Ordóñez</h1>
+                <footer>Web Developer - Environmental Scientist</footer>
+            </div>
+        </div>
     </header>
-    <nav>
+
+    <nav class="scroll">
         <ul>
-            <li><a href="#basics">The Basics</a></li>
-            <li><a href="#education">Education & Training</a></li>
-            <li><a href="#work-experience">Work Experience</a></li>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#education">Education & Training</a>
+            </li>
+            <li>
+                <a href="#work-experience">Work Experience</a>
+            </li>
+            <li>
+                <a href="#about-me">About Me</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
         </ul>
     </nav>
     <main>
-        <section id="basics">
-            <h1>The Basics</h1>
-            <div class="basics-wrapper">
-                <p>
-                    My name is Inma Ordóñez. I am an environmental scientist and a web developer in training. I live and work
-                    in Catalonia, Spain.
-                </p>
-                <figure>
-                    <img class="h" src="./imgs/beach.jpg" alt="Me at the lighthouse of Punta del Fangar (Delta de l'Ebre Natural Park)">
-                    <figcaption>Always exploring!</figcaption>
-                </figure>
-            </div>
-        </section>
         <section id="education">
-            <h1>Education & Training</h1>
-            <h2>Formal Education</h2>
-            <ul>
-                <li>
-                    I finished my <span class="bold">Degree in Environmental Sciences</span> at the 
-                    <a href="https://www.upo.es/portal/impe/web/portada?lang=en" target="_blank">Universidad Pablo de Olavide</a> 
-                    (Seville, Spain) in 2009. On my final research project I studied the topic of Life Cycle Analysis of solar cells.
-                </li>
-                <li>
-                    In 2009-10 I studied my <span class="bold">Master's Degree on Integrated Management Systems (Quality and Environment)</span>,
-                    also at Pablo de Olavide. My research project was on the topic of Change Management in the publishing sector to adapt to e-reader technology.
-                </li>
-            </ul>
-            <h2>Further Training</h2>
+            <h1 class="current">Education & Training</h1>
+            <div class="edu-wrapper">
+                <div class="edu-formal">
+                    <h2>Formal Education</h2>
+                    <p>
+                        I finished my
+                        <span class="bold">Degree in Environmental Sciences</span> at the
+                        <a href="https://www.upo.es/portal/impe/web/portada?lang=en" target="_blank">Universidad Pablo de Olavide</a>
+                        (Seville, Spain) in 2009. On my final research project I studied the topic of Life Cycle Analysis of solar cells.
+                        <br> In 2009-10 I studied my
+                        <span class="bold">Master's Degree on Integrated Management Systems (Quality and Environment)</span>, also at Pablo de Olavide.
+                        My research project was on the topic of Change Management in the publishing sector to adapt to e-reader technology.
+                    </p>
+                </div>
+                <div class="edu-training">
+                    <h2>Further Training</h2>
                     <h3>Web Development and Programming</h3>
                     <ul>
-                        <li>Currently studying a <span class="bold">Web Development Bootcamp</span> at <a href="https://keepcoding.io/en/" target="_blank">KeepCoding</a>.</li>
-                        <li><span class="bold">Web Development basics:</span> <a href="https://www.coursera.org/account/accomplishments/certificate/ELK95MSECNPY" target="_blank">Introduction to HTML5</a>
-                         and <a href="https://www.coursera.org/account/accomplishments/certificate/XBZQXF3YJ98B" target="_blank">Introduction to CSS3</a> by <a href="https://www.coursera.org/umich" target="_blank">University of Michigan at Coursera</a>.</li>
-                        <li><span class="bold">Python:</span> <a href="https://www.coursera.org/account/accomplishments/certificate/NF5HJGXNL5NL" target="_blank">Introductory Course</a> and <a href="https://www.coursera.org/account/accomplishments/certificate/ESNJ49MR7BDL" target="_blank">Python Data Structures</a>
-                            by <a href="https://www.coursera.org/umich" target="_blank">University of Michigan at Coursera</a>.</li>
+                        <li>Currently studying a
+                            <span class="bold">Web Development Bootcamp</span> at
+                            <a href="https://keepcoding.io/en/" target="_blank">KeepCoding</a>.</li>
+                        <li>
+                            <span class="bold">Web Development basics:</span>
+                            <a href="https://www.coursera.org/account/accomplishments/certificate/ELK95MSECNPY"
+                                target="_blank">Introduction to HTML5</a>
+                            and
+                            <a href="https://www.coursera.org/account/accomplishments/certificate/XBZQXF3YJ98B" target="_blank">Introduction to CSS3</a> by
+                            <a href="https://www.coursera.org/umich" target="_blank">University of Michigan at Coursera</a>.</li>
+                        <li>
+                            <span class="bold">Python:</span>
+                            <a href="https://www.coursera.org/account/accomplishments/certificate/NF5HJGXNL5NL" target="_blank">Introductory Course</a> and
+                            <a href="https://www.coursera.org/account/accomplishments/certificate/ESNJ49MR7BDL"
+                                target="_blank">Python Data Structures</a>
+                            by
+                            <a href="https://www.coursera.org/umich" target="_blank">University of Michigan at Coursera</a>.</li>
                     </ul>
-                   <h3>Geographic Information Systems (GIS)</h3>
-                   <ul>
-                       <li> <a href="https://www.coursera.org/account/accomplishments/certificate/KTPF6G4WRALM" target="_blank">Fundamentals of GIS</a>, 
-                         <a href="https://www.coursera.org/account/accomplishments/certificate/6KSN62M6F582" target="_blank">GIS Data Formats, Design and Quality</a> 
-                        and <a href="https://www.coursera.org/account/accomplishments/certificate/DGUQGGLYE67Z" target="_blank">Geospatial and Environmental Analysis</a>
-                         by <a href="https://www.coursera.org/ucdavis" target="_blank">University of California, Davis at Coursera</a>.
-                    </li>
-                   </ul>
-            <h2>Languages</h2>
-            <ul>
-                <li><span class="bold">Spanish:</span> Native.</li>
-                <li><span class="bold">English:</span> Certificate in Advanced English (C1 CEFRL).</li>
-                <li><span class="bold">Catalan:</span> B2 CEFRL.</li>
-            </ul>
+                    <h3>Geographic Information Systems (GIS)</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.coursera.org/account/accomplishments/certificate/KTPF6G4WRALM" target="_blank">Fundamentals of GIS</a>,
+                            <a href="https://www.coursera.org/account/accomplishments/certificate/6KSN62M6F582" target="_blank">GIS Data Formats, Design and Quality</a>
+                            and
+                            <a href="https://www.coursera.org/account/accomplishments/certificate/DGUQGGLYE67Z" target="_blank">Geospatial and Environmental Analysis</a>
+                            by
+                            <a href="https://www.coursera.org/ucdavis" target="_blank">University of California, Davis at Coursera</a>.
+                        </li>
+                    </ul>
+                </div>
+                <div class="edu-lang">
+                <h2>Languages</h2>
+                    <ul>
+                        <li>
+                            <span class="bold">Spanish:</span> Native.</li>
+                        <li>
+                            <span class="bold">English:</span> Certificate in Advanced English (C1 CEFRL).</li>
+                        <li>
+                            <span class="bold">Catalan:</span> B2 CEFRL.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section id="work-experience">
             <h1>Work Experience</h1>
-            <h2>2012 - present day: Biodiversity Management Expert at Endesa</h2>
-            <figure>
-                <img src="./imgs/emporda.jpg" class="v" alt="Taking a ride to visit one of our conservation projects">
-            </figure>
-            <p>Endesa is one of the main electric companies in Spain. As a Biodiversity Expert, my job is 
-                to develop and monitor its Biodiversity Conservation Plan. I also report our results, both 
-                internally and to the world! I also advise the company about environmental regulation and international initiatives in topics 
-                such as Natural Capital or Ecosystem Services.
-                I am based in the beautiful city of Lleida, but from here I manage and monitor a set of
-                projects that span all throughout Spain!
-            </p>
-            <h2>2011 - 2012: Environmental Management Specialist at Endesa's As Pontes Thermal Power Plant</h2>
-            <figure>
-                <img class="h" src="./imgs/aspontes.jpg" alt="As Pontes Thermal Power Plant (A Coruña, Spain)">
-            </figure>
-            <p>As Pontes is a thermal power plant in A Coruña (Galicia), in North-Western Spain. During my time working there as an external
-                specialist, I prepared the environmental documentation and reports required for the renovation of its Integrated Environmental
-                Authorisation. I did the same for its companion facility, a smaller combined-cycle power plant.
-            </p>
+            <div class="exp-wrapper">
+                <h2 class="exp-present-title">2012 - present day: Biodiversity Management Expert at Endesa</h2>
+                <figure class="exp-present-pic">
+                    <img src="./imgs/emporda.jpg" class="v" alt="Taking a ride to visit one of our conservation projects">
+                </figure>
+                <p class="exp-present-text">Endesa is one of the main electric companies in Spain. As a Biodiversity Expert, my job is to develop and monitor
+                    its Biodiversity Conservation Plan. I also report our results, both internally and to the world! I also advise
+                    the company about environmental regulation and international initiatives in topics such as Natural Capital
+                    or Ecosystem Services. I am based in the beautiful city of Lleida, but from here I manage and monitor a set
+                    of projects that span all throughout Spain!
+                </p>
+                <h2 class="exp-past-title">2011 - 2012: Environmental Management Specialist at Endesa's As Pontes Thermal Power Plant</h2>
+                <figure class="exp-past-pic">
+                    <img class="h" src="./imgs/aspontes.jpg" alt="As Pontes Thermal Power Plant (A Coruña, Spain)">
+                </figure>
+                <p class="exp-past-text">As Pontes is a thermal power plant in A Coruña (Galicia), in North-Western Spain. During my time working there
+                    as an external specialist, I prepared the environmental documentation and reports required for the renovation
+                    of its Integrated Environmental Authorisation. I did the same for its companion facility, a smaller combined-cycle
+                    power plant.
+                </p>
+            </div>
         </section>
         <section id="about-me">
             <h1>About Me</h1>
-            <p>I am a curious human being who enjoys discovering new places and learning about different forms of life. 
-                This is why I became an environmental scientist in the first place. 
-            </p>
-            <video src="imgs/tortuga.mp4" controls="controls"></video>
-            <p>
-                But the Earth is not the only place I love wandering. Sometimes I like creating new worlds in my head. That's why I developed an interest
-                in writing... and coding!
-            </p>
-            <p>
-                The true reason why I decided to study web development, even though it's not directly related to my current job, 
-                is because everytime I start a new project it feels like building a completely new world from scratch. I had a lot of 
-                ideas that I wanted to turn into realities, and web development is providing me with the tools I need for it.
-            </p>
+            <div class="about-wrapper">
+                <div class="about-vid">
+                    <video src="imgs/tortuga.mp4" controls="controls"></video>
+                </div>
+                <div class="about-text">
+                    <p>
+                        I am an environmental scientist and a web developer in training. 
+                        I was born in Seville and I have been living and working in Catalonia since 2012.
+                        I am a curious human being who enjoys discovering new places and learning about different 
+                        forms of life. This is why I became an environmental scientist in the first place.
+                    </p>     
+                    <p>
+                        But the Earth is not the only place I love wandering. Sometimes I like creating new worlds in my head. That's why I developed
+                        an interest in writing... and coding!
+                    </p>
+                    <p>
+                        The true reason why I decided to study web development, even though it's not directly related to my current job, is because
+                        everytime I start a new project it feels like building a completely new world from scratch. I had a lot of
+                        ideas that I wanted to turn into realities, and web development is providing me with the tools I need for
+                        it.
+                    </p>
+                </div>
+                
+            </div>
         </section>
         <section id="contact">
             <h1>Contact</h1>
             <form action="">
                 <ul>
                     <li class="form-field">
-                        <p><label for="name">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Name" required></p>
+                        <p>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Name" required>
+                        </p>
                     </li>
                     <li class="form-field">
-                        <p><label for="email">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="Email Address"></p>
+                        <p>
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="Email Address">
+                        </p>
                     </li>
                     <li class="form-field">
-                        <p><legend>How did you know about me?</legend><br>
-                        <input type="radio" name="opciones" id="linkedin" value="linkedin">
-                        <label for="linkedin">LinkedIn profile</label><br>
-                        
-                        <input type="radio" name="opciones" id="github" value="github">
-                        <label for="github">GitHub profile</label><br>
-                        
-                        <input type="radio" name="opciones" id="google" value="google">
-                        <label for="google">Google search</label><br>
-                        
-                        <input type="radio" name="opciones" id="other" value="other">
-                        <label for="other">Other</label><br>
-                        <input type="text" name="other-text" id="other-text" placeholder="Other" class="additional-field"></p>
+                        <p>
+                            <legend>How did you know about me?</legend>
+                            <br>
+                            <input type="radio" name="opciones" id="linkedin" value="linkedin">
+                            <label for="linkedin">LinkedIn profile</label>
+                            <br>
+
+                            <input type="radio" name="opciones" id="github" value="github">
+                            <label for="github">GitHub profile</label>
+                            <br>
+
+                            <input type="radio" name="opciones" id="google" value="google">
+                            <label for="google">Google search</label>
+                            <br>
+
+                            <input type="radio" name="opciones" id="other" value="other">
+                            <label for="other">Other</label>
+                            <br>
+                            <input type="text" name="other-text" id="other-text" placeholder="Other" class="additional-field">
+                        </p>
                     </li>
                     <li class="form-field">
-                        <p><label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" placeholder="123 456 789"></p>
+                        <p>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" name="phone" id="phone" placeholder="123 456 789">
+                        </p>
                     </li>
                     <li class="form-field">
-                        <p><label for="message">Leave your message! (150 words max.)</label><br>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
+                        <p>
+                            <label for="message">Leave your message! (150 words max.)</label>
+                            <br>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        </p>
                     </li>
                 </ul>
             </form>
@@ -155,13 +214,14 @@
     </main>
     <footer>
         <p>
-        <a href="https://www.linkedin.com/in/inmaculada-ordonez-marvizon" target="_blank">LinkedIn</a>
-        <a href="https://github.com/InmaOrdmar" target="_blank">GitHub</a>
-        <a href="https://www.instagram.com/hispalis86/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/inmaculada-ordonez-marvizon" target="_blank">LinkedIn</a>
+            <a href="https://github.com/InmaOrdmar" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com/hispalis86/" target="_blank">Instagram</a>
         </p>
         <p>
             &copy; Inma Ordóñez 2018
         </p>
     </footer>
 </body>
+
 </html>
