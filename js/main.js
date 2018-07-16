@@ -13,6 +13,8 @@ export class Main {
         this.contactHeader = document.querySelector('#h1-contact')
         // nav
         this.nav = document.querySelector('nav')
+        this.navButton = document.querySelector('#nav-button')
+        this.navElements = document.querySelector('#nav-elements-container')
         // links 
         this.eduLink = document.querySelector('#edu-link')
         this.expLink = document.querySelector('#exp-link')
@@ -29,14 +31,15 @@ export class Main {
         this.expLink.addEventListener('click', this.animateExp)
         this.aboutLink.addEventListener('click', this.animateAbout)
         this.contactLink.addEventListener('click', this.animateContact)
+        this.navButton.addEventListener('click', this.toggleNavElements.bind(this))
     }
 
-    stickyNav() {
-        window.pageYOffset >= this.nav.offsetTop ? this.nav.classList.add('scroll') : this.nav.classList.remove('scroll')
-    }
+    // stickyNav() {
+    //    window.pageYOffset >= this.nav.offsetTop ? this.nav.classList.add('scroll') : this.nav.classList.remove('scroll')
+    // }
     // problema: con cada scroll recalcula el nav.offsetTop
 
-    animateEdu() {
-        console.log('click on education section')
+    toggleNavElements() {
+        this.navElements.classList.toggle('open')
     }
 }
