@@ -41,5 +41,6 @@ export class Main {
 
     toggleNavElements() {
         this.navElements.classList.toggle('open')
+        setTimeout(() => {this.navElements.classList.remove('open')}, 3000)
     }
 }
