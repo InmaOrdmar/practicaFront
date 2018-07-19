@@ -25,7 +25,8 @@ export class Main {
     }
         // EVENT LISTENERS 
     defineEventListeners() {
-        window.addEventListener('scroll', this.stickyNav)
+        window.addEventListener('resize', this.checkNavHeight.bind(this))
+        window.addEventListener('scroll', this.stickyNav.bind(this))
         window.addEventListener('scroll', this.highlightCurrentSection)
         this.eduLink.addEventListener('click', this.animateEdu)
         this.expLink.addEventListener('click', this.animateExp)
@@ -34,10 +35,15 @@ export class Main {
         this.navButton.addEventListener('click', this.toggleNavElements.bind(this))
     }
 
-    // stickyNav() {
-    //    window.pageYOffset >= this.nav.offsetTop ? this.nav.classList.add('scroll') : this.nav.classList.remove('scroll')
-    // }
-    // problema: con cada scroll recalcula el nav.offsetTop
+    checkNavHeight() {
+        if (this.nav.offsetTop > 0) {
+            this.navHeight = this.nav.offsetTop
+        }
+    }
+
+    stickyNav() {
+        window.pageYOffset >= this.navHeight ? this.nav.classList.add('scroll') : this.nav.classList.remove('scroll')
+        }
 
     toggleNavElements() {
         this.navElements.classList.toggle('open')
