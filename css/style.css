@@ -313,8 +313,78 @@ body>footer {
 @media screen and (min-width:1024px) {
 
     main h1+div {
-        margin-left: 10vw;
-        margin-right: 10vw;
+        margin-left: 8vw;
+        margin-right: 8vw;
     }
+
+    div.exp-wrapper {
+        display: grid;
+        grid-template: 2rem 17rem 5rem / repeat(20, 1fr);
+        grid-gap: 1rem;
+    }
+
+    h2.exp-present-title {
+        grid-row: 1 / 2;
+        grid-column: 1 / 9;
+        align-self: center;
+    }
+
+    figure.exp-present-pic {
+        grid-row: 2 / 4;
+        grid-column: 1 / 4;
+        align-self: center;
+    }
+
+    p.exp-present-text {
+        grid-row: 2 / 4;
+        grid-column: 4 / 9;
+        align-self: center;
+    }
+
+    h2.exp-past-title {
+        grid-row: 1 / 2;
+        grid-column: 10 / 21;
+    }
+
+    p.exp-past-text {
+        grid-row: 3 / 4;
+        grid-column: 10 / 21;
+    }
+
+    figure.exp-past-pic {
+        grid-row: 2 / 3;
+        grid-column: 12 / 19;
+        justify-self: center;
+    }
+
+    div.exp-wrapper h2 {
+        padding: 0;
+        margin: 0;
+    }
+
+    img.v, img.h {
+        margin: auto;
+        max-width: 100%;
+        padding: 0;
+        float: none;
+        height: auto;
+    }
+
+    img.h {
+        max-height: 100%;
+        width: auto;
+    }
+
+    img.v {
+        width: 100%;
+    }
+
+    figure {
+        padding: 0;
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
+
 
 }
