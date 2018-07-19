@@ -310,7 +310,7 @@ body>footer {
 
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1250px) {
 
     main h1+div {
         margin-left: 8vw;
