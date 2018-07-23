@@ -2,51 +2,71 @@ export class Main {
     constructor() {
         //HANDLERS
         // sections
-        this.eduSection = document.querySelector('#education')
-        this.expSection = document.querySelector('#work-experience')
-        this.h1About = document.querySelector('#about-me')
-        this.h1Contact = document.querySelector('#contact')
-        // section headers
-        this.eduHeader = document.querySelector('#h1-edu')
-        this.expHeader = document.querySelector('#h1-exp')
-        this.aboutHeader = document.querySelector('#h1-about')
-        this.contactHeader = document.querySelector('#h1-contact')
+        this.sections = document.querySelectorAll('main section')
         // nav
         this.nav = document.querySelector('nav')
         this.navButton = document.querySelector('#nav-button')
         this.navElements = document.querySelector('#nav-elements-container')
         // links 
-        this.eduLink = document.querySelector('#edu-link')
-        this.expLink = document.querySelector('#exp-link')
-        this.aboutLink = document.querySelector('#about-link')
-        this.contactLink = document.querySelector('#contact-link')
+        this.homeLink = document.querySelector('#home-link')
+        this.menuLinks = document.querySelectorAll('nav li.sections')
+        this.sectionsAndLinks = this.joinArrays(this.sections, this.menuLinks)
         // form
         this.form = document.querySelector('form')
     }
         // EVENT LISTENERS 
     defineEventListeners() {
-        window.addEventListener('resize', this.checkNavHeight.bind(this))
         window.addEventListener('scroll', this.stickyNav.bind(this))
-        window.addEventListener('scroll', this.highlightCurrentSection)
-        this.eduLink.addEventListener('click', this.animateEdu)
-        this.expLink.addEventListener('click', this.animateExp)
-        this.aboutLink.addEventListener('click', this.animateAbout)
-        this.contactLink.addEventListener('click', this.animateContact)
+        window.addEventListener('scroll', this.highlightLinks.bind(this))
         this.navButton.addEventListener('click', this.toggleNavElements.bind(this))
     }
-
-    checkNavHeight() {
-        if (this.nav.offsetTop > 0) {
+        // FUNCTIONS
+    stickyNav() {        
+        if (this.navHeight) {
+            if (window.pageYOffset > this.navHeight) {
+                this.nav.classList.add('scroll')  
+            } else if (window.pageYOffset < this.navHeight) {
+                this.nav.classList.remove('scroll')
+            }
+        } else if (window.pageYOffset >= this.nav.offsetTop) {
             this.navHeight = this.nav.offsetTop
         }
     }
 
-    stickyNav() {
-        window.pageYOffset >= this.navHeight ? this.nav.classList.add('scroll') : this.nav.classList.remove('scroll')
-        }
-
     toggleNavElements() {
         this.navElements.classList.toggle('open')
-        setTimeout(() => {this.navElements.classList.remove('open')}, 3000)
+        setTimeout(() => {this.navElements.classList.remove('open')}, 4000)
+    }
+
+    highlightLinks() {
+        if (window.pageYOffset < this.sections[0].offsetTop) {
+            this.homeLink.classList.add('current')
+            this.menuLinks.forEach(link => link.classList.remove('current'))
+        } else {
+            this.homeLink.classList.remove('current')
+            this.sectionsAndLinks.forEach((pair, i, array) => {
+                if (window.pageYOffset >= pair[0].offsetTop) {
+                    if (!array[i + 1]) {
+                        array[i - 1][1].classList.remove('current')
+                        pair[1].classList.add('current')
+                    } else if (window.pageYOffset < array[i + 1][0].offsetTop) {
+                    pair[1].classList.add('current')
+                    } else {
+                        pair[1].classList.remove('current')
+                    }
+                } else {
+                    pair[1].classList.remove('current')
+                }
+            })
+        }
+    }
+
+    joinArrays(arr1, arr2) {
+        let result = []
+        arr1.forEach((element, i) => {
+            let dupla = [element, arr2[i]]
+            result.push(dupla)
+        })
+        return result
     }
 }

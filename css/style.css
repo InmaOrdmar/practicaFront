@@ -2,6 +2,7 @@
     --text-color: #2C2928;
     --title-color: #699E7E;
     --white-filter: rgba(255, 255, 255, .7);
+    --highlight: rgb(139, 64, 89);
 }
 
 html {
@@ -88,28 +89,12 @@ header {
 main h1 {
     background-color: rgba(255, 255, 255, .5);
     text-align: center;
+    position: relative;
+    top: 3rem;
 }
 
 main h1+div {
     padding: 3rem 1rem;
-}
-
-main h1.current {
-    animation-name: current-h1;
-    position: relative;
-    animation-duration: 1s;
-    animation-delay: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
-
-@keyframes current-h1 {
-    from {
-        top: 0;
-    }
-    to {
-        top: 3rem;
-    }
 }
 
 nav {
@@ -156,10 +141,12 @@ nav {
 
 nav li {
     font-size: 1.2rem;
+    font-weight: bold;
     display: block;
     margin: 0;
     transition: .3s;
     transition-timing-function: ease-in-out;
+    color: var(--title-color);
 }
 
 nav li a {
@@ -172,9 +159,13 @@ nav li:hover {
     border-radius: .1rem;
 }
 
-a {
-    color: var(--title-color);
+nav li.current {
+    color: var(--highlight);
+}
+
+main a, footer a {
     font-weight: bold;
+    color: var(--title-color);
 }
 
 section p {
@@ -220,6 +211,42 @@ video {
 
 #other-text.hidden {
     display: none;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--title-color);
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    padding: auto;
+    border: 2px solid var(--white-filter);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    width: 10rem;
+    height: 2.7rem;
+}
+
+button:hover {
+    animation-name: button-hover;
+    animation-duration: .15s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-hover {
+    from {
+        background-color: rgba(255, 255, 255, 0);
+        border-color: var(--white-filter);
+        font-size: 1.3rem;
+        box-shadow: none;
+
+    }
+    to {
+        background-color: var(--white-filter);
+        border-color: var(--highlight);
+        font-size: 1.5rem;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+    }
 }
 
 body>footer {
