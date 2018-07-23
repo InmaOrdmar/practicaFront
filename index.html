@@ -175,35 +175,25 @@
                         <li class="form-field">
                             <p>
                                 <label for="email">Email Address</label>
-                                <input type="email" name="email" id="email" placeholder="Email Address">
+                                <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email address">
                             </p>
                         </li>
                         <li class="form-field">
                             <p>
-                                <legend>How did you know about me?</legend>
-                                <br>
-                                <input type="radio" name="opciones" id="linkedin" value="linkedin">
-                                <label for="linkedin">LinkedIn profile</label>
-                                <br>
-
-                                <input type="radio" name="opciones" id="github" value="github">
-                                <label for="github">GitHub profile</label>
-                                <br>
-
-                                <input type="radio" name="opciones" id="google" value="google">
-                                <label for="google">Google search</label>
-                                <br>
-
-                                <input type="radio" name="opciones" id="other" value="other">
-                                <label for="other">Other</label>
-                                <br>
+                                <label for="selection">How did you know about me?</label>
+                                <select name="selection" id="selection">
+                                    <option value="linkedin">LinkedIn profile</option>
+                                    <option value="github">GitHub profile</option>
+                                    <option value="google">Google search</option>
+                                    <option value="other">Other</option>
+                                </select>
                                 <input type="text" name="other-text" id="other-text" placeholder="Other" class="hidden">
                             </p>
                         </li>
                         <li class="form-field">
                             <p>
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" name="phone" id="phone" placeholder="123 456 789">
+                                <input type="tel" name="phone" id="phone" pattern="[0-9]{9}|\(\+[0-9]{2}\)[0-9]{9}" placeholder="123 456 789">
                             </p>
                         </li>
                         <li class="form-field">

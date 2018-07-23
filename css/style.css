@@ -209,8 +209,16 @@ video {
     padding: auto;
 }
 
+#other-text {
+    display: inline-block;
+}
+
 #other-text.hidden {
     display: none;
+}
+
+input:invalid {
+    border: 1px solid red;
 }
 
 button {

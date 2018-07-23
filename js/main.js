@@ -18,7 +18,7 @@ export class Main {
         window.addEventListener('scroll', this.highlightLinks.bind(this))
         this.navButton.addEventListener('click', this.toggleNavElements.bind(this))
     }
-        // FUNCTIONS
+        //METHODS
     stickyNav() {        
         if (this.navHeight) {
             if (window.pageYOffset > this.navHeight) {
@@ -43,11 +43,11 @@ export class Main {
         } else {
             this.homeLink.classList.remove('current')
             this.sectionsAndLinks.forEach((pair, i, array) => {
-                if (window.pageYOffset >= pair[0].offsetTop) {
+                if (window.pageYOffset >= (pair[0].offsetTop - 30)) {
                     if (!array[i + 1]) {
                         array[i - 1][1].classList.remove('current')
                         pair[1].classList.add('current')
-                    } else if (window.pageYOffset < array[i + 1][0].offsetTop) {
+                    } else if (window.pageYOffset < array[i + 1][0].offsetTop - 30) {
                     pair[1].classList.add('current')
                     } else {
                         pair[1].classList.remove('current')
@@ -58,6 +58,8 @@ export class Main {
             })
         }
     }
+
+
 
     joinArrays(arr1, arr2) {
         let result = []
