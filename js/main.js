@@ -11,8 +11,6 @@ export class Main {
         this.homeLink = document.querySelector('#home-link')
         this.menuLinks = document.querySelectorAll('nav li.sections')
         this.sectionsAndLinks = this.joinArrays(this.sections, this.menuLinks)
-        // form
-        this.form = document.querySelector('form')
     }
         // EVENT LISTENERS 
     defineEventListeners() {
