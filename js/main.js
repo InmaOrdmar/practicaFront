@@ -64,8 +64,8 @@ export class Main {
     joinArrays(arr1, arr2) {
         let result = []
         arr1.forEach((element, i) => {
-            let dupla = [element, arr2[i]]
-            result.push(dupla)
+            let pair = [element, arr2[i]]
+            result.push(pair)
         })
         return result
     }
